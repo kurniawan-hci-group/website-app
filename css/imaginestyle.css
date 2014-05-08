@@ -1,0 +1,862 @@
+﻿
+@charset "utf-8";
+
+
+		*  a{ 
+		/*	-webkit-tap-highlight-color:rgba(0,0,0,0); 
+			-webkit-backface-visibility: hidden;
+			-webkit-tap-highlight-color:transparent;
+			-webkit-tap-highlight-color: rgba(255,0,0,0.5);  */
+			
+			-webkit-user-select: none;  /* Chrome all / Safari all */
+			  -moz-user-select: none;     /* Firefox all */
+			  -ms-user-select: none;      /* IE 10+ */
+
+			  /* No support for these yet, use at own risk */
+			  -o-user-select: none;
+			  user-select: none;     
+			-webkit-touch-callout:none;                /* prevent callout to copy image, etc when tap to hold */
+			-webkit-text-size-adjust:none;             /* prevent webkit from resizing text to fit */
+			-webkit-tap-highlight-color:rgba(0,0,0,0); /* prevent tap highlight color / shadow */
+			-webkit-user-select:none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+			 
+		}
+		input {
+	/*		-webkit-user-select: auto !important; */
+		}
+    	html, body
+        {
+            height: 100%;
+        }
+        html
+        {
+            margin: auto;
+        }
+        body
+        {
+            font-family: Arial, 'Lucida Grande' , 'Helvetica Neue' , Helvetica, sans-serif;
+            vertical-align: middle;
+            text-align: center;
+            /*background-color: #FFFFFF;*/
+            background-color: #252525;
+			overflow: hidden; 
+			-webkit-user-select: none; /* Chrome/Safari */        
+			-moz-user-select: none; /* Firefox */
+			-ms-user-select: none; /* IE10+ */
+
+			/* Rules below not implemented in browsers yet */
+			-o-user-select: none;
+			user-select: none;
+        }
+        a{
+            color: #000000;
+            text-decoration: none;
+			 -webkit-tap-highlight-color:rgba(0,0,0,0);
+        }
+    	#content
+    	{
+    	 	width: 100%;
+            height: 100%;
+            background-color: #FFFFFF;
+			 -webkit-tap-highlight-color:rgba(0,0,0,0);
+        }
+		#content *
+		{
+			-webkit-tap-highlight-color:rgba(0,0,0,0);
+			-webkit-user-select: none; /* Chrome/Safari */        
+			-moz-user-select: none; /* Firefox */
+			-ms-user-select: none; /* IE10+ */
+
+			/* Rules below not implemented in browsers yet */
+			-o-user-select: none;
+			user-select: none;
+		 }
+        #topdiv
+        {
+            background-color: #F0F0F0;
+            height: 120px;
+            width: 100%;
+            padding: 0px;
+            margin: 0px;
+            display: table;
+        }
+        #imaginelogo
+        {
+            float: left;
+            width: 40%;
+        }
+        #logo
+        {
+            margin: 20px 20px 0px 20px;
+        }
+
+		/*---------------------------------------------------------*/
+        /* Style for index.html   */
+        /*---------------------------------------------------------*/
+
+        #reviews
+        {
+            margin: 0;
+            padding: 0;
+            float: right;
+            width: 50%;
+            font-size: 70px;
+        }
+        p#reviews:first-letter
+        {
+            font-size: 90px;
+        }
+        #mainlocation
+        {
+            background-color: #FFFFFF;
+            height: 120px;
+            height: 17%;
+            width: 100%;
+            font-size: 100px;
+            display: inline-block;
+            text-align: center;
+        }
+        #maintext
+        {
+            margin: 16px;
+            padding: 0;
+         /*   color: #BFBFBF;  */
+            color: #8F8F8F;
+            font-size: 60px;
+        }
+        p#maintext:first-letter
+        {
+            font-size: 70px;
+        }
+        
+        #infobox
+        {
+            color: #9BBB59;
+            width: 100%;
+            display: table;
+        }
+        #lbracket, #rbracket
+        {
+            float: left;
+            width: 10%;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+        img.curly
+        {
+            height: 130px;
+            margin: 0px 30px 0px 30px;
+            vertical-align: middle;
+        }
+        #infobox #infotext
+        {
+            width: 80%;
+            float: left;
+            font-size: 30px;
+            margin: 0px 0px 35px 0px;
+            display: table-cell;
+            font-family: Arial, 'Lucida Grande' , 'Helvetica Neue' , Helvetica, sans-serif;
+            vertical-align: middle;
+            text-align: center;
+        }
+        #selection
+        {
+            width: 100%;
+        }
+        #testmode, #practicemode
+        {
+            padding: 30px 20px;
+            margin: 20px 20px 0px 20px;
+            width: 270px;
+            height: 100px;
+            color: #9BBB59;
+            text-align: center;
+            display: inline-block;
+            font-size: 50px;
+            line-height: 100%;
+            vertical-align: middle;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        #testmode
+        {
+            color: #9BBB59;
+            background: #EAF1DD;
+            border: 5px solid #9BBB59;
+        }
+        #practicemode
+        {
+            color: #BFBFBF;
+            background: #F2F2F2;
+            border: 5px solid #BFBFBF;
+        }
+        #practicemode a
+        {
+        	color: #BFBFBF;
+        }
+        #testmode a
+        {
+        	color: #9BBB59;
+        }
+        .verticalLine
+        {
+            border-left: 3px solid #D8D8D8;
+            border-bottom: 3px solid #D8D8D8;
+            border-top: 3px solid #D8D8D8;
+            width: 0px;
+            height: 200px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .verticalLine#v1
+        {
+            height: 220px;
+        }
+        .verticalLine#v2
+        {
+            height: 120px;
+        }
+        #testmodeinfo, #practicemodeinfo
+        {
+            margin: 20px;
+            width: 300px;
+            height: 100px;
+            display: inline-block;
+            font-size: 26px;
+            line-height: 100%;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+        #testmodeinfo
+        {
+            color: #9BBB59;
+            text-align: center;
+        }
+        #practicemodeinfo
+        {
+            color: #BFBFBF;
+            text-align: center;
+        }
+        #practicemodeinfo a
+        {
+        	color: #BFBFBF;
+        }
+        #testmodeinfo a
+        {
+        	color: #9BBB59;
+        }
+        
+        /*---------------------------------------------------------*/
+        /* Style for pages after mode selection   */
+        /*---------------------------------------------------------*/
+
+        #toprightnav
+        {
+            float: right;
+            width: 60%;
+            margin: 0;
+            padding: 0;
+        }
+        #mode_test
+        {
+            height: 70%;
+            font-size: 58px;
+            color: #9BBB59;
+            text-align: left;
+            line-height: 100%;
+        }
+        #mode_practice
+        {
+            height: 70%;
+            font-size: 48px;
+            /*color: #9BBB59;*/
+            color: #000000;
+            text-align: center;
+            line-height: 100%;
+        }
+        #reviews_mode
+        {
+            height: 30%;
+            font-size: 30px;
+            text-align: right;
+            vertical-align: top;
+            color: #8F8F8F;
+            margin: 10px 30px 5px 0px;
+            line-height: 100%;
+            padding: 0px;
+        }
+        #main
+        {
+            display: table;
+            margin: 0px;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            background: #f3f7ed; /* Old browsers */
+            background: -moz-linear-gradient(left,  #f3f7ed 0%, #ffffff 25%, #ffffff 75%, #f3f7ed 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f3f7ed), color-stop(25%,#ffffff), color-stop(75%,#ffffff), color-stop(100%,#f3f7ed)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(left,  #f3f7ed 0%,#ffffff 25%,#ffffff 75%,#f3f7ed 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(left,  #f3f7ed 0%,#ffffff 25%,#ffffff 75%,#f3f7ed 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(left,  #f3f7ed 0%,#ffffff 25%,#ffffff 75%,#f3f7ed 100%); /* IE10+ */
+            background: linear-gradient(to right,  #f3f7ed 0%,#ffffff 25%,#ffffff 75%,#f3f7ed 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f7ed', endColorstr='#f3f7ed',GradientType=1 ); /* IE6-9 */
+        }
+        #mainleft, #mainright
+        {
+            padding: 5px;
+            height: 100%;
+            width: 20%;
+            font-size: 20px;
+            color: #9BBB59;
+            font-weight: bold;
+            float: left;
+            display: table-cell;
+            text-align: center;
+        }
+        .navtext a
+        {
+        	color: #9BBB59;
+        }
+        #userid,#adminid
+        {
+            color: #000000;
+        }
+        #loggedin
+        {
+            color: #000000;
+        }
+        #mainmid
+        {
+            padding: 80px 0px 10px 0px;
+            width: 56%;
+            float: left;
+            height: 100%;
+            display: table-cell;
+        }
+        #midheadertext
+        {
+            font-size: 70px;
+            /*color: #000000;*/
+            color: #9BBB59;
+        }
+        #midtext
+        {
+            font-size: 28px;
+            font-weight: bold;
+            color: #8F8F8F;
+            padding: 20px;
+        }
+        #errortext
+        {
+            font-size: 16px;
+            color: #FF0000;
+        }
+        #btm
+        {
+            padding: 150px 150px;
+            text-align: center;
+        }
+        #homebutton
+        {
+            font-size: 16px;
+            font-weight: bold;
+            color: #939393;
+            background: #F2F2F2;
+            border: 2px solid #BFBFBF;
+            padding: 10px 10px;
+            margin: 10px 10px 0px 10px;
+            width: 60px;
+            height: 15px;
+            text-align: center;
+            display: inline-block;
+            line-height: 100%;
+            vertical-align: middle;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        #homebutton a
+        {
+        	color: #939393;
+        }
+        
+        /*---------------------------------------------------------*/
+		/* Style for login page */
+        /*---------------------------------------------------------*/
+
+        #loginbox
+        {
+            padding: 20px 20px;
+            margin: 20px 20px 0px 20px;
+            width: 280px;
+            height: 80px;
+            color: #9BBB59;
+            text-align: center;
+            display: inline-block;
+            font-size: 18px;
+            line-height: 100%;
+            vertical-align: middle;
+            border-radius: 20px;
+            /*color: #9BBB59;*/
+            /*background: #D6E3BC;*/
+            background: #EAF1DD;
+            border: 5px solid #9BBB59;
+        }
+        .input
+        {
+            border: 1px solid #006;
+            background: #EAF1DD;
+        }
+        .button
+        {
+            border: 1px solid #9BBB59;
+            background: #EAF1DD;
+            color: #9BBB59;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+        } 
+        label
+        {
+            font-weight: bold;
+            display: block;
+            width: 150px;
+            float: left;
+            margin: 2px 2px 12px 2px;
+            text-align: left;
+        }
+        br
+        {
+            clear: left;
+        }
+        #midtext a
+        {
+            font-size: 20px;
+            font-weight: bold;
+            color: #8F8F8F;
+            padding: 20px;
+        }
+       
+        /*---------------------------------------------------------*/
+        /* Style for Select/Registe User page   */
+        /*---------------------------------------------------------*/
+
+        #userbutton
+        {
+            font-size: 26px;
+            font-weight: bold;
+            color: #9BBB59;
+            background: #EAF1DD;
+            border: 3px solid #9BBB59;
+            padding: 20px 20px;
+            margin: 10px 10px 0px 10px;
+            width: 120px;
+            height: 20px;
+            text-align: center;
+            vertical-align: middle;
+            display: inline-block;
+            line-height: 100%;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        #userbutton a
+        {
+        	color: #9BBB59;
+        }
+        #btm_user
+        {
+            padding: 20px 20px;
+            text-align: center;
+        }
+		#midheader2_user
+		{
+			font-size: 60px;
+		}
+		#midtext2_user
+		{
+			font-size: 26px;
+			color: #9BBB59;
+			font-weight: bold;
+		}
+		#midtext3_sel_reg_user
+		{
+			font-size: 24px;
+			font-weight: bold;
+		}
+        
+        /* Style for New user page   */
+        #midtext3_new_user
+		{
+			font-size: 22px;
+			font-weight: bold;
+		}
+        
+        /*--------------------------------------------------*/
+        /* Style for practice_mode.php and test_mode.php   */
+        /*--------------------------------------------------*/
+        
+        /*.apptext
+        {
+            font-size: 28px;
+            font-weight: bold;
+            padding: 5px;
+        }*/
+        #appbutton
+        {
+            font-size: 26px;
+            font-weight: bold;
+            color: #9BBB59;
+            background: #EAF1DD;
+            border: 3px solid #9BBB59;
+            padding: 25px 25px;
+            margin: 10px 10px 0px 10px;
+            width: 250px;
+            height: 30px;
+            text-align: center;
+            vertical-align: middle;
+            display: inline-block;
+            line-height: 100%;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        
+        /*--------------------------------------------------*/
+        /* Style for displaying results   */
+        /*--------------------------------------------------*/
+        
+        table.session_info
+        {
+			border: 3px solid #9BBB59;
+			border-collapse:collapse;
+        }
+        table.session_info  th 
+		{
+			border: 3px solid #9BBB59;
+			background: #9BBB59;
+			color: #FFFFFF; 
+			font-size: 24px;
+			font-weight: bold;
+			padding:5px;
+		}
+		table.session_info  tr 
+		{
+			border: 3px solid #9BBB59;
+		}
+		table.session_info  td 
+		{
+			border: 3px solid #9BBB59;
+			font-size: 24px;
+			font-weight: noraml;
+			padding:5px;
+			text-align: left;
+		}
+		
+		/*---Results---*/
+		
+		table.results
+        {
+			border: 3px solid #9BBB59;
+			border-collapse:collapse;
+        }
+        table.results  th 
+		{
+			border: 3px solid #9BBB59;
+			background: #9BBB59;
+			color: #FFFFFF; 
+			font-size: 24px;
+			font-weight: bold;
+			padding:5px;
+		}
+		table.results  tr 
+		{
+			border: 3px solid #9BBB59;
+		}
+		table.results  td 
+		{
+			border: 3px solid #9BBB59;
+			font-size: 20px;
+			font-weight: noraml;
+			padding:5px;
+			text-align: center;
+		}
+        
+        /*--------------------------------------------------*/
+        /* Style for number_review.php and money...   */
+        /*--------------------------------------------------*/
+    	
+    	#html_review
+        {
+        	width: 100%;
+            height: 100%;
+        	display: table;
+        	margin: auto;
+       	background-color: #252525;
+		 	-webkit-touch-callout: none; 
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none; 
+			overflow: hidden; 
+        }
+        :fullscreen {
+            width: 100%;
+        }
+
+        :full-screen body, :-moz-full-screen body, :-webkit-full-screen body {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #body_review
+        {
+        	width: 100%;
+            height: 100%;
+            display: table-cell;
+            margin: auto;
+            font-family: Arial, 'Lucida Grande', 'Helvetica Neue', Helvetica, sans-serif;
+            vertical-align: middle;
+            text-align: center;
+            background-color: #252525;
+			 /*-webkit-touch-callout: none; 
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;*/
+        }
+    	
+        #loading {
+            border: 8px solid #a1a1a1;
+            padding: 100px 180px;
+            height: 300px;
+            width: 500px;
+            /*margin-bottom: 10px;
+            margin-left: auto;
+            margin-right: auto;*/
+           border-radius: 25px;
+            background: #595959;
+            font-size: 500%;
+            color: #D8D8D8;
+           	/*display: table-cell;*/
+     		display: inline;
+            text-align: center;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+        
+        #promptbutton {
+            border: 2px solid #a1a1a1;
+            padding: 8px 40px;
+            background: #595959;
+            height: 42px;
+            width: 330px;
+            margin-bottom: 10px;
+            border-radius: 25px;
+            font-size: 225%;
+            color: #D8D8D8;
+            text-align: center;
+            display: inline-block;
+            vertical-align: middle;
+            cursor: pointer;
+            display: none;
+        }
+                
+        /*img {
+            display: none;
+        }*/
+
+        img#arrow {
+			height: 28px;
+        }
+        
+        #question {
+            border: none;
+            color: #D8D8D8;
+            padding: 10px 40px;
+            height: 50px;
+            font-size: 200%;
+            text-align: center;
+            display: inline;
+            vertical-align: middle;
+            display: none;
+        }
+        
+        .box {
+            border: 3px solid #a1a1a1;
+            padding: 10px 10px;
+            background: #FFFFFF;
+            width: 115px;
+            height: 115px;
+            color: #000000;
+            text-align: center;
+            display: inline-block;
+            margin: 5px 4px 5px 4px;
+            cursor: pointer;
+            font-size: 750%;
+            line-height: 100%;
+            vertical-align: middle;
+            border-radius: 4px;
+            display: none;
+        }
+        		
+		.box#big {
+			width: 585px;
+			height: 790px;
+			font-size: 5000%;
+			line-height: 100%;
+			background: #FFFF00;
+		}
+		
+		.box .empty {
+			border: none;
+			padding: 13px 13px;
+			background: #D7E4BD;
+		}
+
+		.box#bottomicon {
+			border: none;
+			padding: 12px 12px;
+			background: #D7E4BD;
+			width: 585px;
+			cursor: default;
+			text-align: center;
+			font-size: 200%;
+		}
+
+        .select_text {
+            display: inline;
+            display: none;
+        }
+
+        #choosetext {
+            display: inline-block;
+            position: relative;
+            border: none;
+            padding: 12px 12px;
+            width: 585px;
+            cursor: default;
+            text-align: center;
+            font-size: 200%;
+            display: none;
+        }
+        
+        .reinforcer {
+            display: none;
+        }
+
+        .reinforcegifs {
+            width: 700px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+            	
+    	 /*--------------------------------------------------*/
+        /* Style for money_review.php   */
+        /*--------------------------------------------------*/  
+         #topdiv_mr {
+            width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            align-content: center;
+            text-align: left;
+            display: none;
+        }
+    	
+    	 #promptbutton_mr {
+            border: 2px solid #a1a1a1;
+            padding: 8px 30px;
+            background: #595959;
+            height: 42px;
+            width: 380px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 40px;
+            border-radius: 25px;
+            font-size: 36px;
+            color: #D8D8D8;
+            text-align: center;
+            cursor: pointer;
+            clear: left;
+            float: left;
+            display: inline-block;
+        }
+    	
+    	img#arrow_mr {
+            height: 28px;
+            float: right;
+        	margin: 6px;
+        }
+        
+        #question_mr {
+            border: none;
+            color: #D8D8D8;
+            padding: 20px 0px 0px 40px;
+            height: 10px;
+            font-size: 200%;
+            text-align: center;
+            display: inline;
+            vertical-align: middle;
+            width: 30%;
+            float: left;
+        }
+
+        .coinbox {
+            clear: left;
+            float: left;
+            margin: 10px;
+            padding: 20px;
+            margin-left: 50px;
+            width: 155px;
+            height: 151px;
+            background: #3F3F3F;
+            vertical-align: middle;
+            line-height: 165px;
+            cursor: pointer;
+            display: none;
+        }
+
+        .coinbox img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .billbox {
+            float: left;
+            padding: 10px;
+            height: 190px;
+            width: 444px;
+            cursor: pointer;
+            display: none;
+            margin-right: 50px;
+        }
+
+        .billbox img {
+        	width: 100%;
+            height: 100%;
+        }
+        
+    	/*--------------------------------------------------*/
+        /* Style for color_review.php   */
+        /*--------------------------------------------------*/ 
+        
+        /*#body_cr{
+        	display: table-cell;
+            font-family: Arial, 'Lucida Grande', 'Helvetica Neue', Helvetica, sans-serif;
+            vertical-align: middle;
+            text-align: center;
+            background: url(content/black-background-paisley-resized.jpg);
+            background-repeat: repeat;
+        }*/
+    
+        /*--------------------------------------------------*/
+        /* Style for review_done.php   */
+        /*--------------------------------------------------*/          
+        #midtext2_rev_done
+		{
+			font-size: 50px;
+			color: #9BBB59;
+			font-weight: bold;
+		}
